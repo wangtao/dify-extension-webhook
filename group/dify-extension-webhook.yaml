@@ -1,0 +1,22 @@
+settings:
+  - name: auth_token_key
+    type: secret-input
+    required: true
+    label:
+      en_US: API key
+      zh_Hans: Auth Token Key
+    placeholder:
+      en_US: Please input your auth token key
+      zh_Hans: 请输入Auth Token Key
+  - name: app_id
+    type: app-selector
+    scope: chat
+    required: true
+    label:
+      en_US: App
+      zh_Hans: App
+    placeholder:
+      en_US: Please select an app
+      zh_Hans: 请选择一个应用
+endpoints:
+  - endpoints/dify-extension-webhook.yaml

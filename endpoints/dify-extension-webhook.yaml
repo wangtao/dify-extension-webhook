@@ -1,0 +1,5 @@
+path: "/webhook"
+method: "POST"
+extra:
+  python:
+    source: "endpoints/dify-extension-webhook.py"

@@ -1,0 +1,48 @@
+version: 0.0.1
+type: plugin
+author: wangtao
+name: dify-extension-webhook
+label:
+  en_US: dify-extension-webhook
+  ja_JP: dify-extension-webhook
+  zh_Hans: 流程启动Webhook
+description:
+  en_US: dify-extension-webhook
+  ja_JP: dify-extension-webhook
+  zh_Hans: 接收Webhook Gateway的请求, 启动dify流程
+icon: icon.png
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    model:
+      enabled: true
+      llm: true
+      text_embedding: false
+      rerank: false
+      tts: false
+      speech2text: false
+      moderation: false
+    endpoint:
+      enabled: true
+    app:
+      enabled: true
+    storage:
+      enabled: true
+      size: 1048576
+plugins:
+  endpoints:
+    - group/dify-extension-webhook.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+created_at: 2025-04-11T22:47:16.9343478+08:00
+privacy: PRIVACY.md
+verified: false
